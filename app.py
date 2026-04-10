@@ -22,7 +22,7 @@ swagger = Swagger(app, template_file='openapi.yaml')
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
 # Configuração do CORS para permitir o acesso do seu frontend na Vercel
-CORS(app, origins=["https://projeto-charada.vercel.app"])
+CORS(app, origins="*")
 
 ADM_USUARIO = os.getenv("ADM_USUARIO")
 ADM_SENHA = os.getenv("ADM_SENHA")
